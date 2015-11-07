@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>业务记录</title>
+<style type="text/css">
+table{
+	width:80%;
+	font-size:18px;`
+	empty-cells:show;
+	border-collapse:collapse;
+	table-layout:fixed;
+	color:#666;
+}
+th{
+	heigth:30px;
+	overflow:hidden;
+	width:110px;
+}
+td{
+	heigth:30px;
+	overflow:hidden;
+	width:150px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:break-all;
+
+}
+</style>
+</head>
+
+<body>
+<p align="center" style="font-family:黑体; font-size:25px">业务记录表</p>
+<form method="post">
+<table border=1 align="center">
+	<caption>
+    <p align="center" style="font-size:20px; font-family:黑体;">业务记录查询<br>
+    </caption>	                                 
+	<tr>
+		<th>业务名称</th>
+        <th>客户</th>
+        <th>客户电话</th>
+        <th>金额</th>
+        <th>负责人</th>
+        <th>执行日期</th>
+        <th>备注</th>
+        <th>详情</th>
+	</tr>
+	{% for yewu in yewu_list %}
+
+	<tr>
+  		<td class="gray"><label title="{{yewu.title}}">{{yewu.title}}</label></td>
+		<td class="gray"><label title="{{yewu.man}}">{{yewu.man}}</label></td>
+		<td class="gray"><label title="{{ yewu.manphone }}">{{ yewu.manphone }}</label></td>
+        <td class="gray"><label title="{{yewu.money }}">{{ yewu.money }}</label></td>
+		<td class="gray"><label title="{{ yewu.fuzeren }}">{{ yewu.fuzeren }}</label></td>
+		<td class="gray"><label title="{{yewu.date }}">{{ yewu.date }}</label></td>
+        <td class="gray"><label title="{{yewu.beizhu }}">{{ yewu.beizhu }}</label></td>
+		<td class="gray" align="center"><a href="/search/?id={{yewu.id}}">查询</a></td>
+ 	</tr>
+	{% endfor %}
+</table>
+</form>
+</html>

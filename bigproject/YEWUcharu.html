@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head> 
+<meta charset="utf-8">
+<title>添加业务</title>
+<style> 
+.gray{
+	border-bottom:1px solid #000000;
+	width:150px;
+	border-left:0px; border-top:0px; border-right:0px;
+	
+	background-color:transparent;
+	font-size:20px;
+}
+.mm{
+	
+	border-left:0px; border-top:0px; border-right:0px;
+	border-bottom:0px;
+	background-color:transparent;
+	font-size:20px;
+	height:30px;
+	width:270px;
+}
+.kk{
+	border-left:0px; border-top:0px; border-right:0px;
+	border-bottom:0px;
+	font-size:18px;`
+}
+table{
+	width:auto;
+	font-size:18px;`
+	empty-cells:show;
+	border-collapse:collapse;
+	width:auto;
+	color:#666;
+}
+th{
+	heigth:30px;
+	overflow:hidden;
+	width:110px;
+}
+td{
+	heigth:30px;
+	overflow:hidden;
+	width:150px;
+}
+</style>
+</head>
+
+<body>
+<p align="center" style="font-family:黑体; font-size:25px">登记业务记录</p>
+
+<form method="post">
+<table  align="center" border="1" style="font-family:仿宋; font-size:25px">
+	<caption>
+    <p align="center" style="font-size:30px">业务记录登记<br>
+    <p align="right" style="font-size:25px">登记日期:<input name="denglu" type="text" class="gray"></p>
+    </caption>
+		<tr>
+        	<th>业务名称</th>
+            <td colspan="3"><input name="title" type="text" class="mm" style=" width:750px"></td></tr>
+    	<tr>
+            <th>客户</th>
+            <td><input name="name" type="text" class="mm"></td>
+            <th>客户电话</th>
+            <td><input name="name" type="text" class="mm"></td>
+        </tr>
+        <tr>
+        	<th>收/支</th>
+            <td><input name="publisher" type="radio" value="收入" >收入<input name="publisher" type="radio" value="支出">支出</td><th>金额（元）</th><td><input name="money" type="text" class="mm"> </td>
+         </tr>
+    	 <tr>
+         	<th>负责人</th>
+            <td><input name="people" type="text" class="mm"></td>
+            <th>执行日期</th>
+            <td><input name="date" type="text" class="mm"></td>
+         </tr>
+         <tr>
+         <th>备注</th>
+         <td colspan="3"><textarea name="add" style="width:745px" rows="10" class="kk"></textarea></td>
+         </tr>
+         </table>
+
+<p align="center" >
+<td class="gray" ><input type="submit" value="保存" style="font-family:楷体; font-size:25px"> <input type="reset" value="重填" style="font-family:楷体; font-size:25px"></td>
+</p>
+</form>
+</body>
+</html>
