@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>公司人员</title>
+<style type="text/css">
+table{
+	width:80%;
+	font-size:18px;`
+	empty-cells:show;
+	border-collapse:collapse;
+	table-layout:fixed;
+	color:#666;
+}
+th{
+	heigth:30px;
+	overflow:hidden;
+	width:110px;
+}
+td{
+	heigth:30px;
+	overflow:hidden;
+	width:150px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:break-all;
+
+}
+</style>
+</head>
+
+<body>
+<form method="get" action="/search/">
+<input type="text" name="search"><input type="submit" value="查询具体">
+</form>
+<table border=1 align="center">
+
+ <tr>
+	<th>职位</th>
+   	<th>姓名</th>
+   	<th>性别</th>
+   	<th>出生日期</th>
+    <th>民族</th>
+   	<th>籍贯</th>
+    <th>电话</th>
+   	<th>到职日期</th> 
+    <th>本薪</th>
+    <th>职务津贴</th>
+    <th>技术津贴</th>
+    <th>总工资</th>
+ </tr>
+{% for people in people_list %}
+
+ <tr>
+ 
+	<td>{{ people.post}}</td>
+   <td>{{ people.name }}</td>
+   <td>{{ people.sex}}</td>
+   <td>{{ people.birthday}}</td>
+   <td>{{ people.nation}}</td>
+   <td>{{ people.country}}</td>
+   <td>{{ people.phone}}</td>
+   <td>{{ people.worktime}}</td>
+   <td>{{ people.base_salary}}</td>
+   <td>{{ people.post_salary}}</td>
+   <td>{{ people.tech_salary}}</td>
+   <td>{{ people.all_salary}}</td>
+   <form method="get">	
+   <td><input name="delete" type="hidden" value="{{people.id}}"><input type="submit" value="删除"></td>
+   </form>
+   <form method="get" action="//">	
+   <td><input name="edit" type="hidden" value="{{people.id}}"><input type="submit" value="修改"></td>
+   </form>
+   <form method="get" action="/addr_book_edit/">	
+   <td><input name="edit" type="hidden" value="{{people.id}}"><input type="submit" value="查看"></td>
+   </form>
+
+ </tr>
+{% endfor %}
+
+</table>
+<form action="/add_people/">
+<input type="submit" value="插入新员工">
+</form>
+</body>
+</html>
