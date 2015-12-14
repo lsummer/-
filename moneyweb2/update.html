@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>职员信息（修改）</title>
+</head>
+
+<body>
+
+<p align="center" style="font-family:黑体; font-size:25px">职员信息修改</p>
+<form method="post">
+<table border=0 align="center"; style="font-family:仿宋; font-size:25px">
+<th>姓名</th>
+            <td class="gray">{{people.name}}</td>
+            </tr>
+            <tr>
+         	<th>职位</th>
+            <td class="gray"><input name="post_name" type="text" placeholder="{{post.post_name}}" class="mm"></td>
+	  </tr>
+            <th>性别</th>
+           <td class="gray"> {% if people.sex %} 男 {% else %} 女 {% endif %}</td>
+        </tr>
+        <tr>
+            <th>出生日期</th>
+            <td class="gray"><input name="birthday" type="date" placeholder="{{people.birthday}}" class="mm"></td>
+              </tr>
+            <th>民族</th>
+           <td class="gray"><input name="nation" placeholder="{{people.nation}}" type="text" class="mm"></td>
+        </tr>
+        <tr>
+            <th>籍贯</th>
+            <td class="gray"><input name="address" placeholder="{{people.address}}" type="text" class="mm"></td>
+          </tr>
+            <th>电话</th>
+            <td class="gray"><input name="phone" placeholder="{{people.phone}}" type="text" class="mm"></td>
+        </tr>
+	<th>Email</th>
+            <td class="gray"><input name="email" placeholder="{{people.email}}" type="text" class="mm"></td>
+        </tr>
+    	 
+	<tr>
+            <th>到职日期</th>
+            <td class="gray"><input name="date" type="text" placeholder="{{people.date}}" class="mm"></td>
+         </tr>
+</table>
+<p align="center" >
+<td class="gray" ><input type="submit" value="保存" style="font-family:黑体; font-size:15px"> <input type="reset" value="重填" style="font-family:黑体; font-size:15px"></td>
+</p>
+</form>
+</body>
+</html>

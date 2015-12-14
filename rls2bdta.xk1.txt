@@ -1,0 +1,53 @@
+﻿这个是已经实现了人员管理和业务管理的版本，但是还有一些bug
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   moneyweb2/YEWUfull.html
+#	new file:   moneyweb2/insert_people.html
+#	new file:   moneyweb2/insert_yewu.html
+#	new file:   moneyweb2/login.html
+#	new file:   moneyweb2/login_error.html
+#	new file:   moneyweb2/main.html
+#	new file:   moneyweb2/manage.py
+#	new file:   moneyweb2/moneyweb2/__init__.py
+#	new file:   moneyweb2/moneyweb2/__init__.pyc
+#	new file:   moneyweb2/moneyweb2/settings.py
+#	new file:   moneyweb2/moneyweb2/settings.pyc
+#	new file:   moneyweb2/moneyweb2/urls.py
+#	new file:   moneyweb2/moneyweb2/urls.pyc
+#	new file:   moneyweb2/moneyweb2/wsgi.py
+#	new file:   moneyweb2/moneyweb2/wsgi.pyc
+#	new file:   moneyweb2/register.html
+#	new file:   moneyweb2/show_people.html
+#	new file:   moneyweb2/show_salary.html
+#	new file:   moneyweb2/show_yewu.html
+#	new file:   moneyweb2/static/css/demo.css
+#	new file:   moneyweb2/static/css/menu_elastic.css
+#	new file:   moneyweb2/static/css/normalize.css
+#	new file:   moneyweb2/static/fonts/font-awesome-4.2.0/css/font-awesome.min.css
+#	new file:   moneyweb2/static/fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.eot
+#	new file:   moneyweb2/static/fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.svg
+#	new file:   moneyweb2/static/fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.ttf
+#	new file:   moneyweb2/static/fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.woff
+#	new file:   moneyweb2/static/js/classie.js
+#	new file:   moneyweb2/static/js/main3.js
+#	new file:   moneyweb2/static/js/snap.svg-min.js
+#	new file:   moneyweb2/update.html
+#	new file:   moneyweb2/update_search.html
+#	new file:   moneyweb2/webapp/__init__.py
+#	new file:   moneyweb2/webapp/__init__.pyc
+#	new file:   moneyweb2/webapp/admin.py
+#	new file:   moneyweb2/webapp/migrations/0001_initial.py
+#	new file:   moneyweb2/webapp/migrations/0001_initial.pyc
+#	new file:   moneyweb2/webapp/migrations/__init__.py
+#	new file:   moneyweb2/webapp/migrations/__init__.pyc
+#	new file:   moneyweb2/webapp/models.py
+#	new file:   moneyweb2/webapp/models.pyc
+#	new file:   moneyweb2/webapp/tests.py
+#	new file:   moneyweb2/webapp/views.py
+#	new file:   moneyweb2/webapp/views.pyc
+#
+

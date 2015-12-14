@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html>
+<head> 
+<meta charset="utf-8">
+<title>编辑人员</title>
+<style> 
+.gray{
+	background-color:transparent;
+	font-size:20px;
+}
+.mm{
+	
+	background-color:transparent;
+	font-size:20px;
+	height:21px;
+	width:270px;
+}
+.kk{
+	border-left:0px; border-top:0px; border-right:0px;
+	border-bottom:0px;
+	font-size:18px;`
+}
+table{
+	width:auto;
+	font-size:18px;`
+	empty-cells:show;
+	border-collapse:collapse;
+	width:auto;
+	color:#666;
+}
+th{
+	heigth:30px;
+	overflow:hidden;
+	width:150px;
+}
+td{
+	heigth:30px;
+	overflow:hidden;
+	width:150px;
+	border-bottom:1px ;
+	border-left:1px;
+	border-top:0px; 
+	border-right:0px;
+
+}
+</style>
+</head>
+
+<body>
+<br></br><br></br>
+<p align="center" style="font-family:黑体; font-size:25px">人员登记</p>
+
+<form method="post">
+<table  border=0 align="center" border="1" style="font-family:仿宋; font-size:25px">
+    <br></br>
+    	<tr>
+            <th>姓名</th>
+            <td class="gray"><input name="name" type="text" class="mm"></td>
+            </tr>
+            <th>性别</th>
+           <td class="gray"><input name="sex" type="radio" value="M"> 男 <input name="sex" type="radio" value="F"> 女 </td>
+        </tr>
+        <tr>
+            <th>出生日期</th>
+            <td class="gray"><input name="birthday" type="text" class="mm"></td>
+              </tr>
+            <th>民族</th>
+           <td class="gray"><input name="nation" type="text" class="mm"></td>
+        </tr>
+        <tr>
+            <th>籍贯</th>
+            <td class="gray"><input name="address" type="text" class="mm"></td>
+          </tr>
+            <th>电话</th>
+            <td class="gray"><input name="phone" type="text" class="mm"></td>
+        </tr>
+	<th>Email</th>
+            <td class="gray"><input name="email" type="text" class="mm"></td>
+        </tr>
+    	 <tr>
+         	<th>职位</th>
+            <td class="gray"><input name="post_name" type="text" class="mm"></td>
+	  </tr>
+	<tr>
+            <th>到职日期</th>
+            <td class="gray"><input name="date" type="text" class="mm"></td>
+         </tr>
+</table>	
+   
+         
+
+<p align="center" >
+<td class="gray" ><input type="submit" value="保存" style="font-family:楷体; font-size:25px"> <input type="reset" value="重填" style="font-family:楷体; font-size:25px"></td>
+</p>
+</form>
+</body>
+</html>

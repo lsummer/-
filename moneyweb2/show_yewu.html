@@ -1,0 +1,125 @@
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>业务一览</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/menu_elastic.css" />
+		<script src="/static/js/snap.svg-min.js"></script>
+    
+
+<style type="text/css">
+table{
+	width:80%;
+	font-size:18px;`
+	empty-cells:show;
+	border-collapse:collapse;
+	table-layout:fixed;
+	color:#666;
+}
+th{
+	heigth:30px;
+	overflow:hidden;
+	width:110px;
+}
+td{
+	heigth:30px;
+	overflow:hidden;
+	width:150px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:break-all;
+
+}
+</style>
+</head>
+<body>
+<div>
+			<div class="menu-wrap" id="jicheng">
+				<nav class="menu">
+					<div class="icon-list">
+                    	
+						<i class="fa fa-fw fa-star-o"></i><span>公司账户</span>
+                        <ul>
+                        <li style=" font-family:黑体; font-size:15px"><a href="/insert_yewu/">登记业务</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="/browse_yewu/">业务一览表</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">业务详情</a></li>
+						</ul>
+						<i class="fa fa-fw fa-bell-o"></i><span>人员管理</span>
+                         <ul>
+                        <li style=" font-family:黑体; font-size:15px"><a href="/update_search/">更新员工信息</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="/show_people/">员工一览表</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="/insert_people/">插入新员工</a></li>
+						</ul>
+						<i class="fa fa-fw fa-envelope-o"></i><span>发票管理</span>
+                        <ul>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">登记发票</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">发票一览表</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">发票详情</a></li>
+						</ul>
+						<a href="#"><i class="fa fa-fw fa-comment-o"></i><span>使用说明</span></a>
+					</div>
+				</nav>
+				
+				<div class="morph-shape" id="morph-shape" data-morph-open="M-1,0h101c0,0,0-1,0,395c0,404,0,405,0,405H-1V0z">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+						<path d="M-1,0h101c0,0-97.833,153.603-97.833,396.167C2.167,627.579,100,800,100,800H-1V0z"/>
+					</svg>
+				</div>
+			</div>
+            <button class="menu-button" id="open-button">Open Menu</button>
+			<div class="content-wrap" style="background:hsla(0,0%,98%,1.00)">
+				<div  style="background:hsla(0,0%,100%,1.00)">
+<p align="center" style="font-family:黑体; font-size:25px; color:hsla(0,0%,0%,1.00)">业务记录查询</p>
+    <body> 
+
+        <form action="/details_yewu/" method="get" >
+        <p align="center" style="font-family:黑体;font-size:25px;color:hsla(0,2%,50%,1.00)">业务搜索</p>
+        <p align="center">
+         <input type="text" name="search_name" style="font-size:24px">
+            <input type="submit" value="搜索" style="font-size:24px; font-family:alexa-std">
+        </p>
+        </form>
+        </body>
+<table border=1 align="center">
+	<caption>
+    <p align="center" style="font-family:黑体; font-size:25px">业务一览</p>
+        
+    </caption>	     
+                              
+	<tr>
+		<th>业务名称</th>
+        <th>客户</th>
+        <th>客户电话</th>
+        <th>金额</th>
+        <th>负责人</th>
+        <th>执行日期</th>
+        <th>备注</th>
+        <th>详情</th>
+	</tr>
+	{% for yewu in yewu_list %}
+
+	<tr>
+  		<td class="gray"><label title="{{yewu.title}}">{{yewu.title}}</label></td>
+		<td class="gray"><label title="{{yewu.client}}">{{yewu.client}}</label></td>
+		<td class="gray"><label title="{{ yewu.phone }}">{{ yewu.phone }}</label></td>
+        <td class="gray"><label title="{{yewu.money }}">{{ yewu.money }}</label></td>
+		<td class="gray"><label title="{{ yewu.person }}">{{ yewu.person }}</label></td>
+		<td class="gray"><label title="{{yewu.date }}">{{ yewu.date }}</label></td>
+        <td class="gray"><label title="{{yewu.beizhu }}">{{ yewu.beizhu }}</label></td>
+		<td class="gray" align="center"><a href="/search/?id={{yewu.id}}">查询</a></td>
+ 	</tr>
+	{% endfor %}
+</table>
+
+
+</div>
+			</div><!-- /content-wrap -->
+		</div><!-- /container -->
+		<script src="/static/js/classie.js"></script>
+		<script src="/static/js/main3.js"></script>
+        </body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head> 
+<style type="text/css"> 
+table{
+	width:80%;
+	font-size:18px;`
+	empty-cells:show;
+	border-collapse:collapse;
+	table-layout:fixed;
+	color:#666;
+}
+th{
+	heigth:50px;
+	overflow:hidden;
+	width:110px;
+}
+td{
+	align-self:center
+	heigth:30px;
+	overflow:hidden;
+	width:150px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:break-all;
+}
+</style>
+<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>业务记录</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/menu_elastic.css" />
+		<script src="/static/js/snap.svg-min.js"></script>
+    
+
+</head>
+
+	<body>
+		<div>
+			<div class="menu-wrap" id="jicheng">
+				<nav class="menu">
+					<div class="icon-list">
+                    	
+						<i class="fa fa-fw fa-star-o"></i><span>公司账户</span>
+                        <ul>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">登记业务</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">业务一览表</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">业务详情</a></li>
+						</ul>
+						<i class="fa fa-fw fa-bell-o"></i><span>人员管理</span>
+                         <ul>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">更新员工信息</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="">员工工资</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="/show_people/">员工一览表</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="/insert_people/">插入新员工</a></li>
+						</ul>
+						<i class="fa fa-fw fa-envelope-o"></i><span>发票管理</span>
+                        <ul>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">登记发票</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">发票一览表</a></li>
+                        <li style=" font-family:黑体; font-size:15px"><a href="#">发票详情</a></li>
+						</ul>
+						<a href="#"><i class="fa fa-fw fa-comment-o"></i><span>使用说明</span></a>
+					</div>
+				</nav>
+				
+				<div class="morph-shape" id="morph-shape" data-morph-open="M-1,0h101c0,0,0-1,0,395c0,404,0,405,0,405H-1V0z">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+						<path d="M-1,0h101c0,0-97.833,153.603-97.833,396.167C2.167,627.579,100,800,100,800H-1V0z"/>
+					</svg>
+				</div>
+			</div>
+			<button class="menu-button" id="open-button">Open Menu</button>
+            
+			<div class="content-wrap" style="background: hsla(0,0%,98%,1.00); background-size: cover; width: 100%; height: 100%;">
+				<div  style="background:hsla(0,0%,100%,1.00)">
+<p align="center" style="font-family:黑体; font-size:25px; color:hsla(0,0%,0%,1.00)">人员详细信息</p>
+<form method="post">
+	<table  align="center" border="0" style="font-family:仿宋; font-size:20px">
+
+		<tr height="30">
+        	<th>姓名：</th>
+            <td colspan="1" >{{people.name}}</td>
+          	<th>性别：</th>
+            <td colspan="1" >{% if people.sex %} 男 {% else %} 女 {% endif %}</td>
+            <th >出生日期：</th>
+            <td colspan="1">{{people.birthday}}</td>
+    
+         </tr>
+         <tr height="30">
+        	<th>民族：</th>
+            <td colspan="1">{{people.nation}}</td>
+          	<th>籍贯：</th>
+            <td colspan="1">{{people.address}}</td>
+            <th>电话：</th>
+            <td colspan="1">{{people.phone}}</td>
+         </tr>
+    	<tr height="30">
+            <th>职位：</th>
+            <td colspan="1">{{salaryen.post_name}}</td>
+          	<th>入职时间：</th>
+            <td colspan="1">{{people.date}}</td>
+        </tr>
+         </table>
+         
+        
+        <table border=1 align="center">
+        <p align="center" style="font-family:黑体; font-size:25px; color:hsla(0,0%,0%,1.00)">工资登记</p>
+	<tr>
+		<th>日期</th><th>职务津贴</th><th>技术津贴</th><th>操作</th>
+	</tr>
+	<tr align="center">
+		<td><input name="date1" type="text" style="width:265px"></td>
+		<td><input name="zsaving" type="text" style="width:265px"></td>
+		<td><input name="tsaving" type="text" style="width:265px"></td>
+        <td><input type="submit" value="保存"> <input type="reset" value="重填"></td>
+	</tr>
+	</tr>
+</table>
+       
+        <p align="center" style="font-family:黑体; font-size:25px; color:hsla(0,0%,0%,1.00)">工资详情</p>
+<table  align="center" border="1" >
+         <tr align="center">
+         <th>日期</th>
+        <th>工薪</th>
+        <th>职务津贴</th>
+        <th>技术津贴</th>
+      	<th>总工资</th>
+        </tr>
+        {% for salary1 in salary %}
+
+     <tr align="center">
+     
+       <td>{{ salary1.datemonth }}</td>
+       <td>{{ salary1.base}}</td>
+       <td>{{ salary1.zsavings}}</td>
+       <td>{{ salary1.tsavings}}</td>
+       <td>{{ salary1.all_salary}}</td>
+       
+       </tr>
+       {% endfor %}
+       </table>
+
+ </form>
+			</div><!-- /content-wrap -->
+		</div><!-- /container -->
+		<script src="/static/js/classie.js"></script>
+		<script src="/static/js/main3.js"></script>
+        </body>
+</html>
